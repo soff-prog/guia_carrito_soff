@@ -4,11 +4,13 @@ import { stylesGlobal } from '../theme/appTheme'
 
 interface Props{
     buttonText: string;
+    onPress:()=> void;
+    
 }
 
-export const ButtonComponent = ({buttonText}: Props) => {
+export const ButtonComponent = ({buttonText, onPress}: Props) => {
     return (
-    <TouchableOpacity style={stylesGlobal.button}>
+    <TouchableOpacity style={stylesGlobal.button} onPress={onPress}>
         <Text style={stylesGlobal.buttonText}>{buttonText}</Text>
     </TouchableOpacity>
     )
