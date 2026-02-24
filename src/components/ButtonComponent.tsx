@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, TouchableOpacity } from 'react-native'
-import { stylesGlobal } from '../theme/appTheme'
+import { styleGlobal } from '../theme/appTheme';
 
 interface Props{
     buttonText: string;
@@ -10,8 +10,8 @@ interface Props{
 
 export const ButtonComponent = ({buttonText, onPress}: Props) => {
     return (
-    <TouchableOpacity style={stylesGlobal.button} onPress={onPress}>
-        <Text style={stylesGlobal.buttonText}>{buttonText}</Text>
+    <TouchableOpacity style={styleGlobal.button} onPress={onPress}>
+        <Text style={styleGlobal.buttonText}>{buttonText}</Text>
     </TouchableOpacity>
     )
 }

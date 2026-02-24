@@ -1,5 +1,4 @@
-import { StackNavigator } from '../navigator/StackNavigator';
-export const PRIMARY_COLOR ="#f57e7e";
-export const SECONDARY_COLOR ="white";
-export const TERTIARY_COLOR ="#68dbeb";
-export const CUARTERNARY_COLOR = "#b8b9f3";
+export const PRIMARY_COLOR ='#f5f8ff';
+export const SECONDARY_COLOR = '#7483c0';
+export const TERTIARY_COLOR = 'black'
+export const QUARTERNARY_COLOR= '#b7c2eeff'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { KeyboardTypeOptions, TextInput, useWindowDimensions } from 'react-native'
-import { stylesGlobal } from '../theme/appTheme'
+import { styleGlobal } from '../theme/appTheme';
 
 interface Props{
     placeholder: string;
@@ -18,6 +18,6 @@ export const InputComponent = ({placeholder, keyboardType, handleChangeValue, na
         keyboardType={keyboardType}
         onChangeText={(value)=>handleChangeValue(name,value)}
         secureTextEntry={isPassword}
-        style={stylesGlobal.input}>{placeholder}</TextInput>
+        style={styleGlobal.input}>{placeholder}</TextInput>
     )
 }

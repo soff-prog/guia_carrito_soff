@@ -4,11 +4,11 @@ import { TitleComponent } from '../components/TitleComponent';
 import { StatusBar } from 'expo-status-bar';
 import { PRIMARY_COLOR } from '../commons/constants';
 import { BodyComponents } from '../components/BodyComponents';
-import { stylesGlobal } from '../theme/appTheme';
 import { InputComponent } from '../components/InputComponent';
 import { ButtonComponent } from '../components/ButtonComponent';
 import Icon from '@expo/vector-icons/MaterialIcons';
 import { CommonActions, useNavigation } from '@react-navigation/native';
+import { styleGlobal } from '../theme/appTheme';
 
 
 //interface define la estructura del objeto del formulario
@@ -73,9 +73,9 @@ export const LoginScreen = () => {
         <StatusBar backgroundColor={PRIMARY_COLOR}/>
         <TitleComponent title="Iniciar Sesion"/>
         <BodyComponents>
-            <Text style ={stylesGlobal.titleWelcome}>Bienvenido de nuevo!</Text>
+            <Text style ={styleGlobal.titleWelcome}>Bienvenido de nuevo!</Text>
             <Text>Realiza tus compras de manera rapida y segura</Text>
-        <View style ={stylesGlobal.containerInput}>
+        <View style ={styleGlobal.containerInput}>
             <InputComponent placeholder='email' 
             keyboardType='email-address'
             handleChangeValue={handleChangeValue}
@@ -87,12 +87,12 @@ export const LoginScreen = () => {
             isPassword={hiddenPassword}/>
         <Icon name={hiddenPassword == true ?'visibility' :'visibility-off'} color={PRIMARY_COLOR}
         size={20}
-        style={stylesGlobal.iconPasswprd}
+        style={styleGlobal.iconPassword}
         onPress={()=>setHiddenPassword(!hiddenPassword)}/>
         </View>
         <ButtonComponent buttonText='Iniciar' onPress={handleSingIn}/>
         <TouchableOpacity onPress={()=>navigation.dispatch(CommonActions.navigate({name:'Register'}))}>
-            <Text style={stylesGlobal.registrateText}>No tienes una cuenta? Registrate ahora</Text>
+            <Text style={styleGlobal.textRedirect}>No tienes una cuenta? Registrate ahora</Text>
         </TouchableOpacity>
         </BodyComponents>
     </View>
