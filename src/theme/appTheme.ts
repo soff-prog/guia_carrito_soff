@@ -15,7 +15,7 @@ export const styleGlobal = StyleSheet.create({
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         paddingHorizontal: 30,
-        paddingTop: 30
+        paddingVertical: 40
         
     },
     titleWelcome:{
@@ -60,5 +60,95 @@ export const styleGlobal = StyleSheet.create({
         color:PRIMARY_COLOR,
         fontWeight: 'bold',
         textAlign: 'center'
+    },
+    containerCard:{
+        //flexDirection: 'row',
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 10,
+        borderWidth: 1,
+        borderColor: "#cfcfcf",
+        borderRadius: 3,
+        borderStyle: 'solid',
+        margin: 7,
+        shadowColor: '#000',
+        shadowOpacity:0.25,
+        shadowRadius: 2.65,
+        elevation:2
+
+    },
+    titleCard:{
+        fontWeight: 'bold',
+        fontSize: 16,
+        color: PRIMARY_COLOR
+    },
+    textPrice:{
+        textAlign:'center',
+        color: "#eeecf1ff"
+    },
+    imageCard:{
+        width: 80,
+        height: 80
+    },
+    iconCard: {
+        flex:1,
+        alignItems: 'flex-end',
+        marginTop:2
+    },
+    containerModal:{
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0,0,0,0.5)'
+    },
+    bodyModal:{
+        padding:20,
+        backgroundColor: QUARTERNARY_COLOR,
+        borderRadius: 10
+    },
+    headerModal:{
+        flexDirection: 'row',
+        borderBottomColor: '#352a75ff',
+        borderBottomWidth: 1,
+        padding: 10
+    },
+    titleModal:{
+        fontWeight: 'bold',
+        fontSize: 20
+    },
+    imageModal: {
+        height:200,
+        width:200
+    },
+    containerQuantity:{
+        flexDirection:'row',
+        alignItems: 'center',
+        justifyContent:'center'
+    },
+    buttonQuantity:{
+        backgroundColor: SECONDARY_COLOR,
+        height:50, 
+        width: 50,
+        borderRadius: 50,
+        justifyContent: 'center',
+        alignItems:'center',
+        margin: 15,
+    },
+    buttonQuantifyText:{
+        color: PRIMARY_COLOR,
+        fontSize:20,
+        fontWeight:'bold'
+    },
+    textTotalPrice:{
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginBottom: 10
+    },
+    textStock:{
+        fontSize: 18,
+        color: '#820707',
+        fontWeight: 'bold',
+        textAlign:'center'
     }
 })
