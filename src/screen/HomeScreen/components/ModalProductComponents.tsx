@@ -9,12 +9,23 @@ interface Props{
     isVisible: boolean; //mostar modal
     item: Product;
     hiddenModal: () => void; //ocultar el modal
+    changeStockProduct: (id: number, quantity: number) => void; ///funcion que actualiza el stock
 }
 
-export const ModalProductComponents = ({isVisible, item, hiddenModal}: Props) => {
+export const ModalProductComponents = ({isVisible, item, hiddenModal, changeStockProduct}: Props) => {
     const { width } = useWindowDimensions();
     //hook useState: permite gestior el estado del contador
     const [quantity, setQuantity] = useState<number>(1);
+
+    //funcion para agregar el producto al carrito
+    const handleAddProduct = () => {
+        //llamar a la funcion que actualice el stock
+        changeStockProduct(item.id, quantity);
+        //cerral el modal
+        hiddenModal();
+        //reiniciar la cantidad
+        setQuantity(1);
+    }
 
     //funcion para validar el stock
     const handlechangeStock = (value: number): void =>{
@@ -56,18 +67,20 @@ export const ModalProductComponents = ({isVisible, item, hiddenModal}: Props) =>
                 </TouchableOpacity>
                 <Text style={{fontSize: 20}}>{quantity}</Text>
                 <TouchableOpacity style={styleGlobal.buttonQuantity}
-                onPress={() => setQuantity(quantity + 1)}>
+                onPress={() => setQuantity(quantity + 1)}
+                disabled={quantity == item.stock}>
                     <Text style={styleGlobal.buttonQuantifyText}>+</Text>
                 </TouchableOpacity>
             </View>
             <View style={{alignItems: 'center'}}>
                 <Text style={styleGlobal.textTotalPrice}>Total: ${(item.price * quantity).toFixed(2)}</Text>
             </View>
-            <TouchableOpacity style={styleGlobal.button}>
+            <TouchableOpacity style={styleGlobal.button}
+                onPress={handleAddProduct}>
                 <Text style={styleGlobal.buttonText}>Agregar carrito</Text>
             </TouchableOpacity>
-                </>
-            }
+        </>
+        }
             
         </View>
     </View>

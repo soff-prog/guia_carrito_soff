@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { PRIMARY_COLOR, QUARTERNARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR } from "../commons/constants";
+import { PRIMARY_COLOR, QUARTERNARY_COLOR, QUINARY_COLOR, SECONDARY_COLOR, TERTIARY_COLOR } from "../commons/constants";
 
 
 export const styleGlobal = StyleSheet.create({
@@ -150,5 +150,44 @@ export const styleGlobal = StyleSheet.create({
         color: '#820707',
         fontWeight: 'bold',
         textAlign:'center'
+    },
+    headerHome:{
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    iconHome:{
+        flex: 1,
+        alignItems: 'flex-end',
+        paddingTop: 15,
+        paddingHorizontal: 30
+    },
+    textIconCart:{
+        backgroundColor:QUINARY_COLOR,
+        color: PRIMARY_COLOR,
+        paddingHorizontal: 5,
+        borderRadius: 10,
+        fontWeight: 'bold',
+        fontSize: 13
+    },
+    headerTable: {
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    headerDescription: {
+        flexDirection:'row',
+    },
+    headerTextTable:{
+        fontWeight: 'bold',
+        fontSize: 15,
+        color: TERTIARY_COLOR
+    },
+    containerTotalPay:{
+        alignItems: 'flex-end',
+        marginVertical: 15
+    },
+    textTotalPay:{
+        fontWeight: 'bold',
+        fontSize: 18,
+        color: TERTIARY_COLOR
     }
 })
